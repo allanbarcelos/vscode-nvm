@@ -3,6 +3,6 @@ import * as vscode from 'vscode';
 
 suite('Extension Tests', () => {
   test('extension is registered', () => {
-    assert.ok(vscode.extensions.getExtension('abumalick.vscode-nvm'));
+    assert.ok(vscode.extensions.getExtension('allanbarcelos.vscode-nvm'));
   });
 });

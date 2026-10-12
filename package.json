@@ -1,17 +1,26 @@
 {
   "name": "vscode-nvm",
   "displayName": "vscode nvm integration",
-  "description": "nvmrc integration",
-  "version": "0.0.1",
+  "description": "Use the node version from .nvmrc in terminals, tasks and the debugger",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
-    "name": "abumalick"
+    "name": "Allan Barcelos"
   },
+  "publisher": "allanbarcelos",
   "repository": {
-    "url": "git@github.com:abumalick/vscode-nvm.git",
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/allanbarcelos/vscode-nvm.git"
   },
-  "publisher": "abumalick",
+  "bugs": {
+    "url": "https://github.com/allanbarcelos/vscode-nvm/issues"
+  },
+  "keywords": [
+    "nvm",
+    "nvmrc",
+    "node",
+    "version"
+  ],
   "engines": {
     "vscode": "^1.85.0"
   },
