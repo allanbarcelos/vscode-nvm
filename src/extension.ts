@@ -1,8 +1,7 @@
-'use strict';
 import * as vscode from 'vscode';
 
 function use(x: vscode.Terminal) {
-  var isWin = process.platform === "win32";
+  const isWin = process.platform === "win32";
   if (isWin) {
     x.sendText(`nvm use $(Get-Content .nvmrc).replace( 'v', '' )`);
   }
