@@ -12,19 +12,8 @@ function use(x: vscode.Terminal) {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Congratulations, your extension "vscode-nvm" is now active!');
-
-  const terminals = (<any>vscode.window).terminals;
-  if (terminals.length) {
-    // console.log("Found opened terminals, let's change node version");
-    terminals.forEach(function switchNode(t: vscode.Terminal) {
-      use(t);
-    });
-  }
-  (<any>vscode.window).onDidOpenTerminal((e: vscode.Terminal) => {
-    // console.log('Terminal opened: ');
-    use(e);
-  });
+  vscode.window.terminals.forEach(use);
+  context.subscriptions.push(vscode.window.onDidOpenTerminal(use));
 }
 
 export function deactivate() { }
